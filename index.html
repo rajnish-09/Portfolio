@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajnish portfolio</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <div id="header-container"></div>
+
+    <script>
+    fetch('header_footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        });
+    </script>
+
+    <main class="main">
+        <section class="intro">
+            <div class="left__design"></div>
+            <div class="main__intro">
+                <img src="assets/photos/IMG_8372.jpg" alt="Rajnish Photo" class="intro__photo" />
+                <div class="intro__content">
+                    <h1 class="intro__greeting">YOO<br />WHAT'S UP</h1>
+                    <p class="intro__text">
+                        <b>I'm Rajnish,</b><span style="font-size: 25px; font-weight: bold">
+                            a passionate web developer.</span>
+                    </p>
+                    <p class="skill__title">Web Developer</p>
+                    <p class="intro__description">
+                        who loves turning ideas into clean, modern, and interactive
+                        digital experiences.
+                    </p>
+                    <button type="button" class="btn btn--primary">Contact Now</button>
+                </div>
+            </div>
+            <div class="right__design"></div>
+        </section>
+    </main>
 </body>
 </html>
