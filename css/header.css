@@ -1,4 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
 /* svg  style */
+
 .icon {
     display: inline-block;
     width: 1em;
@@ -22,7 +29,7 @@
 .header__top {
     display: flex;
     justify-content: space-between;
-    margin: 0.5rem 1rem;
+    margin: 1rem 2rem;
 }
 
 .header__email,
@@ -43,7 +50,7 @@
     background-color: black;
     color: white;
     border-radius: 34px;
-    margin: 1rem 0;
+    margin: 1rem 2rem;
     padding: 1rem 2rem;
 }
 
@@ -60,7 +67,7 @@
 }
 
 .header__bottom a:hover {
-    color: grey;
+    color: rgb(251, 19, 197);
     cursor: pointer;
 }
 

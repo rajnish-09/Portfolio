@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,21 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/font.css">
 </head>
-<body>
-    <div id="header-container"></div>
 
+<body>
+    <!-- header -->
+    <div id="header-container"></div>
     <script>
-    fetch('header_footer.html')
-        .then(response => response.text())
-        .then(data => {
-        document.getElementById('header-container').innerHTML = data;
-        });
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
     </script>
 
+    <!-- main -->
     <main class="main">
+        <!-- Introduction section -->
         <section class="intro">
             <div class="left__design"></div>
             <div class="main__intro">
@@ -39,6 +43,58 @@
             </div>
             <div class="right__design"></div>
         </section>
+
+        <!-- about me section -->
+        <section class="about__me-section">
+            <p class="about__me">
+                About Me
+            </p>
+            <hr>
+            <p class="about__me-description"><span>Hi, I’m <b>Rajnish Shrestha,</b></span> Web Developer<br>
+                    who loves blending creativity and technology to craft clean, engaging, and easy-to-use digital
+                    experiences. I started my journey out of curiosity and quickly discovered how much I enjoy bringingideas to life through design and code. Beyond coding, I’m always exploring new tools, learning, and finding inspiration to make my projects better every day.<br>
+                    I am from Dhading Bensi, a small and beautiful place. Outside coding, I love travelling and explore nature. I also love watching anime. 
+            </p>
+            <p class="what__i-do-title">What I do?</p>
+            <div class="what__i-do-section">
+                <div class="about__me-web-design"><svg class="icon icon-document-file-html" style="width: 5rem; height: 5rem;">
+                    <use xlink:href="#icon-document-file-html"></use></svg>
+                    <div class="web__design-description">
+                        <p><b>Web Design</b></p>
+                        <p>Designing responsive and user-friendly websites.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
     </main>
+
+    <!-- footer -->
+    <div id="footer-container"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="
+        opacity: 0;
+        height: 0 !important;
+        position: absolute;
+        display: none;
+      ">
+        <defs>
+            <symbol id="icon-document-file-html" viewBox="0 0 32 32">
+                <path
+                    d="M19 26v2.003c0 1.107-0.894 1.997-1.997 1.997h-15.005c-1.107 0-1.997-0.899-1.997-2.007v-22.985c0-1.109 0.899-2.007 2.009-2.007h9.991v6.002c0 1.111 0.898 1.998 2.006 1.998h4.994v2h-12.993c-1.661 0-3.007 1.342-3.007 2.999v7.002c0 1.656 1.336 2.999 3.007 2.999h12.993zM13 3v5.997c0 0.554 0.451 1.003 0.991 1.003h5.009l-6-7zM6.007 14h22.985c1.109 0 2.007 0.892 2.007 1.992v7.016c0 1.092-0.899 1.992-2.007 1.992h-22.985c-1.109 0-2.007-0.892-2.007-1.992v-7.016c0-1.092 0.899-1.992 2.007-1.992zM29 22h-4v-6h-1v7h5v-1zM14 17v6h1v-6h2v-1h-5v1h2zM10 19h-3v-3h-1v7h1v-3h3v3h1v-7h-1v3zM20.5 19l-1.5-3h-1v7h1v-5l1 2h1l1-2v5h1v-7h-1l-1.5 3z">
+                </path>
+            </symbol>
+        </defs>
+    </svg>
+
+    
 </body>
+
 </html>
