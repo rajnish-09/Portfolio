@@ -32,15 +32,17 @@
     margin: 1rem 2rem;
 }
 
-.header__email,
-.header__socials {
+.header__email a,
+.header__socials{
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
 }
 
-.header__socials {
-    margin-right: 1rem;
+.header__socials a{
+    color: black;
 }
 
 .header__bottom {
@@ -71,7 +73,7 @@
     cursor: pointer;
 }
 
-header a {
+.header__bottom a {
     color: white;
     text-decoration: none;
 }
