@@ -15,8 +15,7 @@
     border-radius: 10px;
 }
 
-.left__design,
-.right__design {
+.design{
     width: 2rem;
     background-color: #FFAB35;
     height: 100%;
@@ -43,11 +42,12 @@
     height: 85%;
     object-fit: cover;
     border-radius: 35px;
+    box-shadow: -8px 8px 8px rgb(164, 164, 164);
 }
 
 .intro__greeting {
     font-family: 'UnifrakturCook', cursive;
-    font-size: 45px;
+    font-size: 4em;
     color: transparent;
     -webkit-text-stroke: 4px #FA9200;
     text-transform: uppercase;
@@ -56,13 +56,21 @@
 
 .intro__text {
     font-family: 'alegreya sc', serif;
-    font-size: 45px;
+}
+
+.intro__text strong{
+    font-size: 3.5em;
+}
+
+.intro__text span{
+    font-size: 2em; 
+    font-weight: bold
 }
 
 .skill__title,
 .intro__description {
     font-family: Andada Pro, serif;
-    font-size: 25px;
+    font-size: 1.5em;
     margin-top: 1rem;
 }
 
@@ -87,7 +95,7 @@
     color: #fff;
     font-family: Alkatra, cursive;
 
-    font-size: 1.5rem;
+    font-size: 1rem;
 
     padding: 0 0.5rem;
     border: 2px solid #5002b0;
@@ -174,4 +182,39 @@
     box-shadow: -4px 4px 4px gray;
     font-size: 18px;
     font-family: 'karma', serif;
+}
+
+@media(max-width: 480px){
+    .intro{
+        width: 100%;
+        margin: 0;
+
+    }
+
+    /* main section display none */
+    .design, .intro__greeting{
+        display: none;
+    }
+
+    .main__intro{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .intro__photo{
+        width: 225px;
+        height: 225px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        margin-top: 2rem;
+    }
+
+    .intro__content{
+        text-align: center;
+    }
+
+
+    
+
 }

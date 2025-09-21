@@ -35,32 +35,27 @@
                         <use xlink:href="#icon-github"></use>
                     </svg>
                 </a>
-                
+
             </div>
         </div>
 
         <div class="header__bottom">
-            <img src="assets/photos/logo.png" alt="Website logo" class="header__logo" />
+            <img src="assets/photos/logo.png" alt="Website logo" class="logo header__logo" />
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <img src="assets/photos/logo_black.png" alt="header__logo" class="logo header__logo--black" />
             <nav class="navbar">
-                <ul class="navbar__list">
-                    <li class="navbar__item">
-                        <a href="#home" class="navbar__link">Home</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#projects" class="navbar__link">Projects</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#skills" class="navbar__link">Skills</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#about" class="navbar__link">About</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#hire" class="navbar__link">Hire</a>
-                    </li>
+
+                <ul class="navbar__list" id="nav-links">
+                    <li class="navbar__item"><a href="#home" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="#projects" class="navbar__link">Projects</a></li>
+                    <li class="navbar__item"><a href="#skills" class="navbar__link">Skills</a></li>
+                    <li class="navbar__item"><a href="#about" class="navbar__link">About</a></li>
+                    <li class="navbar__item"><a href="#hire" class="navbar__link">Hire</a></li>
                 </ul>
             </nav>
+
         </div>
+
     </header>
 
 
@@ -97,3 +92,15 @@
 </body>
 
 </html>
+
+
+
+<!-- burger menu functionality -->
+<!-- <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script> -->
