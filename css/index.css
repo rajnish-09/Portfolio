@@ -34,12 +34,12 @@
 .main__intro {
     display: flex;
     align-items: center;
-    height: 100%;
+    /* height: 80vh; */
     gap: 5rem;
 }
 
 .intro__photo {
-    height: 85%;
+    height: 30rem;
     object-fit: cover;
     border-radius: 35px;
     box-shadow: -8px 8px 8px rgb(164, 164, 164);
@@ -94,8 +94,7 @@
     background-color: #5002b0;
     color: #fff;
     font-family: Alkatra, cursive;
-
-    font-size: 1rem;
+    font-size: 1.5rem;
 
     padding: 0 0.5rem;
     border: 2px solid #5002b0;
@@ -158,7 +157,7 @@
 }
 
 .about__me-description span{
-    font-size: 35px;
+    font-size: 2rem;
 }
 
 .what__i-do-title{
@@ -184,11 +183,13 @@
     font-family: 'karma', serif;
 }
 
-@media(max-width: 480px){
+@media(max-width: 768px){
     .intro{
         width: 100%;
         margin: 0;
-
+        margin-bottom: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgb(164, 164, 164);
     }
 
     /* main section display none */
@@ -199,6 +200,8 @@
     .main__intro{
         flex-direction: column;
         gap: 0.5rem;
+        width: 100%;
+        /* margin-bottom: 4rem; */
     }
 
     .intro__photo{
@@ -214,7 +217,43 @@
         text-align: center;
     }
 
-
+    .intro__description{
+        max-width: 400px;
+    }
     
+
+    /* about me section */
+    .about__me-section{
+        padding: 1rem;
+        padding-bottom: 4rem;
+        border-radius: 20px;
+    }   
+
+    .about__me{
+        font-size: 1.5rem;
+    }
+
+    .about__me-section hr{
+        width: 8rem;
+        margin: 0.5rem 0;
+    }
+
+    .about__me-description{
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .what__i-do-section .icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .web__design-description{
+        font-size: 1rem;
+    }
+
+    .btn--primary{
+        font-size: 1rem;
+    }
 
 }

@@ -95,3 +95,32 @@ footer{
     fill: white;
     margin-right: 0.5rem;
 }
+
+.footer_cta2{
+    display: none;
+}
+
+@media(max-width: 768px){
+
+    footer{
+        padding: 1rem;
+    }
+
+    .footer_cta1, .footer__logo{
+        display: none;
+    }
+
+    .footer_cta2{
+        display: block;
+        font-size: 1rem;
+    }
+
+    .btn--hire-me, .footer__quick-links *{
+        font-size: 1rem !important;
+    }
+
+    .footer__get-in-touch svg{
+        width: 1rem;
+        height: 1rem;
+    }
+}
