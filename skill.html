@@ -129,6 +129,16 @@
             <!-- <div class="right__design design"></div> -->
         </section>
 
+
+        <div id="footer-container"></div>
+        <script>
+            fetch("footer.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("footer-container").innerHTML = data;
+                });
+        </script>
+
         <script>
             document.querySelectorAll(".skill").forEach((skill) => {
                 const numberEl = skill.querySelector(".number"); // the span with number
