@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/skill.css" />
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch("header.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("header-container").innerHTML = data;
+            });
+    </script>
+
+    <main>
+        <section class="intro">
+            <!-- <div class="left__design design"></div> -->
+            <div class="skill__description_section">
+                <h1>Skills</h1>
+                <hr style="
+              background-color: #ffab35;
+              width: 100px;
+              height: 3px;
+              border: none;
+              margin-bottom: 20px;
+            " />
+                <p>I am good at web designing. I have following skills:</p>
+                <div class="skills__description-table">
+                    <div class="skills__row">
+                        <div class="skills__cell">Title</div>
+                        <div class="skills__cell">Graph</div>
+                        <div class="skills__cell">Description</div>
+                    </div>
+                    <div class="skills__row">
+                        <div class="skills__cell">HTML</div>
+                        <div class="skill skills__cell">
+                            <div class="outer">
+                                <div class="inner">
+                                    <span id="number" class="number" data-percent="90">90%</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="100%" stop-color="#673ab7" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="skills__cell">
+                            Markup language for structuring web content.
+                        </div>
+                    </div>
+
+                    <div class="skills__row">
+                        <div class="skills__cell">CSS</div>
+                        <div class="skill skills__cell">
+                            <div class="outer">
+                                <div class="inner">
+                                    <span id="number">80%</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="100%" stop-color="#673ab7" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="skills__cell">Stylesheets for designing layouts.</div>
+                    </div>
+
+                    <div class="skills__row">
+                        <div class="skills__cell">JavaScript</div>
+                        <div class="skill skills__cell">
+                            <div class="outer">
+                                <div class="inner">
+                                    <span id="number">70%</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="100%" stop-color="#673ab7" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="skills__cell">Stylesheets for designing layouts.</div>
+                    </div>
+
+                    <div class="skills__row">
+                        <div class="skills__cell">Java</div>
+                        <div class="skill skills__cell">
+                            <div class="outer">
+                                <div class="inner">
+                                    <span id="number">60%</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="100%" stop-color="#673ab7" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="skills__cell">Stylesheets for designing layouts.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="right__design design"></div> -->
+        </section>
+
+        <script>
+            document.querySelectorAll(".skill").forEach((skill) => {
+                const numberEl = skill.querySelector(".number"); // the span with number
+                const target = parseInt(numberEl.dataset.percent); // get target percentage
+                const circle = skill.querySelector("circle"); // the circle element
+
+                // Circle settings
+                const radius = circle.r.baseVal.value;
+                const circumference = 2 * Math.PI * radius;
+                circle.style.strokeDasharray = circumference;
+                circle.style.strokeDashoffset = circumference;
+                circle.style.transition = "stroke-dashoffset 2s linear";
+
+                // Animate number
+                let counter = 0;
+                const interval = setInterval(() => {
+                    if (counter >= target) {
+                        clearInterval(interval);
+                    } else {
+                        counter++;
+                        numberEl.textContent = counter + "%";
+                    }
+                }, 20);
+
+                // Animate circle stroke
+                setTimeout(() => {
+                    circle.style.strokeDashoffset =
+                        circumference - (circumference * target) / 100;
+                }, 100);
+            });
+        </script>
+
+        <svg style="display: none">
+            <defs>
+                <!-- Gradient for the circle stroke -->
+                <linearGradient id="GradientColor" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                </linearGradient>
+
+                <!-- Reusable circle symbol -->
+                <symbol id="gradientCircle" viewBox="0 0 160 160">
+                    <circle cx="80" cy="80" r="70" stroke="url(#GradientColor)" stroke-width="20" fill="none"
+                        stroke-linecap="round" />
+                </symbol>
+            </defs>
+        </svg>
+    </main>
+</body>
+
+</html>

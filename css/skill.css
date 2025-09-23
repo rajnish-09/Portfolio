@@ -1,0 +1,122 @@
+
+.skill{
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.outer{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+        6px 6px 12px rgba(0,0,0,0.2),   /* bottom-right dark */
+        -6px -6px 12px rgba(255,255,255,0.9); /* top-left light */
+}
+
+.inner {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 
+        inset 6px 6px 12px rgba(0,0,0,0.2),   /* inner shadow bottom-right */
+        inset -6px -6px 12px rgba(255,255,255,0.9); /* inner shadow top-left */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: anim 2s linear forwards;
+    /* transform: translate(10px,10px);
+     */
+}
+
+.design{
+    height: 100vh;
+}
+
+.skill svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transform: rotate(-90deg); */
+}
+
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 44;
+    }
+}
+
+.intro {
+   align-items: stretch;
+}
+
+.skill__description_section h1{
+    font-family: 'kavoon', cursive;
+    font-size: 40px;
+}
+
+.skill__description_section p{
+    font-family: 'karma', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skills__description-table div{
+    font-family: 'karma', sans-serif;
+}
+
+.skill__description_section {
+    flex: 1;
+    padding: 2rem 2rem;
+}
+
+.skills__description-table {
+    display: grid;
+    grid-template-columns: 150px 180px 1fr; /* adjust widths for your columns */
+    row-gap: 20px;
+    column-gap: 20px;
+    align-items: left;
+}
+
+
+
+.skills__row {
+    display: contents;
+    position: relative;
+}
+
+.skills__row:first-child {
+    font-weight: bold; /* Make header row bold */
+    font-size: 23px;
+}
+
+.skills__row::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ffab3571;
+    grid-column: 1 / -1; /* span across all columns */
+    margin: 0 0; /* optional spacing */
+}
+
+.skills__cell {
+    padding: 5px 0;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 20px;
+}
