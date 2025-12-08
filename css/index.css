@@ -212,7 +212,7 @@
         flex-direction: column;
         gap: 0.5rem;
         width: 100%;
-        /* margin-bottom: 4rem; */
+        margin-bottom: 4rem;
     }
 
     .intro__photo{
@@ -252,6 +252,10 @@
     .about__me-description{
         font-size: 1rem;
         margin-top: 1rem;
+    }
+
+    .about__me-description span{
+        font-size: 1.5rem;
     }
 
     .what__i-do-section .icon{

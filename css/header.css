@@ -120,20 +120,45 @@
         position: relative;
     }
 
+    .header__bottom {
+        background: transparent;
+        margin: 0;
+        justify-content: left;
+        /* Ensure the header bar itself is on top */
+        position: relative;
+        z-index: 1001; 
+    }
+
     .navbar__list {
-        display: none  !important;
+        display: none !important;
         flex-direction: column;
-        background: #444;
+        
+        /* Glossy effect settings */
+        background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+        backdrop-filter: blur(15px);           /* The blur that creates the glass look */
+        -webkit-backdrop-filter: blur(15px);    /* Support for Safari */
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border for depth */
+        
         position: absolute;
-        top: 70px;
-        left: 0;
-        width: 200px;
-        padding: 15px;
-        border-radius: 8px;
+        top: 70px; 
+        left: 3%;      /* Center the menu slightly for a floating look */
+        width: 40%;    /* Width reduced to show background edges */
+        padding: 20px;
+        border-radius: 15px;
+        
+        /* Stacking fix */
+        z-index: 9999; 
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Soft shadow for lift */
     }
 
     .navbar__list.active {
         display: flex !important;
+    }
+
+    .navbar__item a {
+        color: black;      /* White text looks best on glass */
+        font-weight: bold;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
     
