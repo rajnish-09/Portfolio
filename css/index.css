@@ -49,6 +49,7 @@
 
 .intro__photo {
     height: 30rem;
+    width: 25rem;
     object-fit: cover;
     border-radius: 35px;
     box-shadow: -8px 8px 8px rgb(164, 164, 164);
