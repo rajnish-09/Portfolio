@@ -2,6 +2,8 @@
    CSS CUSTOM PROPERTIES & RESET
    ============================================ */
 
+
+
 :root {
     /* Colors - Refined palette with warm accent */
     --color-primary: #d97706;
@@ -1190,3 +1192,4 @@ section {
     opacity: 0;
     transition: all 0.3s ease;
 }
+
